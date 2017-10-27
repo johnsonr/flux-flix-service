@@ -81,3 +81,15 @@ class SecurityConfiguration {
 ```
 
 If we're to have any hope of deploying this code into production, we'll want to support observability, too. The Spring Boot Actuator surfaces information about the service as HTTP endpoints rooted at `/application`. These endpoints include its `/health`, its HTTP `/mappings`, and many more. In order to enable the HTTP endpoints, we have to opt-in with a simple property in the `src/main/resources/application.properties` file: `endpoints.default.web.enabled=true`.
+
+## Running the Project
+
+First install Mongo db if you don't have it already.
+
+Then, start the server with:
+
+```
+mvn spring-boot:run
+```
+
+Test by visiting `http://localhost:8080/movies`
