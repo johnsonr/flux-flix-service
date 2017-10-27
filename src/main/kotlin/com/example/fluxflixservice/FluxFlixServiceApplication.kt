@@ -57,8 +57,11 @@ class MovieService(private val mr: MovieRepository) {
 class SecurityConfiguration {
 
     @Bean
-    fun users() = MapUserDetailsRepository(User.withUsername("rwinch").password("pw").roles("ADMIN", "USER").build(),
-            User.withUsername("jlong").password("pw").roles("USER").build())
+    fun users() = MapUserDetailsRepository(
+            User.withUsername("springrod").password("pw").roles("ADMIN", "USER").build(),
+            User.withUsername("rob_winch").password("pw").roles("ADMIN", "USER").build(),
+            User.withUsername("starbuxman").password("pw").roles("USER").build()
+    )
 
 }
 
